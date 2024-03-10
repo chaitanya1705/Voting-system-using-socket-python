@@ -5,13 +5,13 @@ import mysql.connector
 import ssl
 
 # Server Configuration
-SERVER_HOST = '10.1.2.4' 
+SERVER_HOST = '<your IP>' 
 SERVER_PORT = 8080
 
-SSL_CERTIFICATE = 'server.crt'
+SSL_CERTIFICATE = 'server.crt' #generate SSL certificate and key for this ( follow Readme.md file)
 SSL_PRIVATE_KEY = 'server.key'
 
-connection = mysql.connector.connect(host="localhost", user="root", password="chaitanya1705", database="networking")
+connection = mysql.connector.connect(host="localhost", user="root", password="<your mysql password>", database="networking")
 print("[CONNECTION DB]:Connected to mysql")
 
 cursor = connection.cursor()
