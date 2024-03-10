@@ -4,7 +4,7 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import ssl
 
-SERVER_HOST = '10.1.2.4'
+SERVER_HOST = '<your IP>'
 SERVER_PORT = 8080
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -13,7 +13,7 @@ context = ssl.create_default_context()
 context.check_hostname = True
 context.verify_mode = ssl.CERT_REQUIRED
 
-context.load_verify_locations(cafile='server.crt')
+context.load_verify_locations(cafile='server.crt') #client shall be given only SSL certificate and not SSL key
 
 ssl_client_socket = context.wrap_socket(client_socket, server_hostname=SERVER_HOST)
 
