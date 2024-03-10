@@ -3,7 +3,7 @@ import socket
 import pickle
 import ssl
 
-SERVER_HOST = '10.1.2.4'
+SERVER_HOST = '<your IP>'
 SERVER_PORT = 8080
 
 def send_data(socket, data):
